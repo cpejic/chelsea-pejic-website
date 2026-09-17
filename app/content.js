@@ -9,7 +9,7 @@ export const actor = {
   eyes: 'Brown',
   hair: 'Brown',
   resumePdf: null,
-  heroImage: { src: '/headshots/chelsea-pejic.png', alt: 'Chelsea Pejic actor headshot', position: '50% 35%' },
+  heroImage: { src: '/headshots/chelsea-pejic.png', alt: 'Chelsea Pejic actor headshot', position: '50% 42%' },
   headshots: [],
   media: [],
 };
