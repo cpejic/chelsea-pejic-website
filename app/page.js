@@ -37,13 +37,9 @@ export default function Home() {
         <div className="headshot-grid">{actor.headshots.map(photo => <figure key={photo.src}><Portrait photo={photo} /><figcaption>{photo.label}</figcaption></figure>)}</div>
       </section> : null}
 
-      {actor.media.length ? <section className="media section" id="media" aria-labelledby="media-title"><div className="wrap media-layout">
-        <div><p className="eyebrow">Media</p><h2 id="media-title">Selected<br /><em>performances.</em></h2></div>
-        <div>{actor.media.map(clip => <article className="clip" key={clip.url}><h3>{clip.title}</h3><p>{clip.description}</p><a className="text-link" href={clip.url} target="_blank" rel="noopener noreferrer">Watch selection <span className="sr-only">(opens in a new tab)</span><Arrow /></a></article>)}</div>
-      </div></section> : null}
-
-      <section className="resume section wrap" id="resume" aria-labelledby="resume-title"><div className="section-heading"><div><p className="eyebrow">02 / Résumé</p><h2 id="resume-title">Experience.</h2></div><div>{actor.resumePdf ? <div className="resume-actions"><a className="text-link" href={actor.resumePdf} target="_blank" rel="noopener noreferrer">View résumé (PDF) <Arrow /></a><a className="text-link" href={actor.resumePdf} download>Download PDF ↓</a></div> : null}</div></div>
+      <section className="resume section wrap" id="resume" aria-labelledby="resume-title"><div className="section-heading"><div><p className="eyebrow">02 / Résumé</p><h2 id="resume-title">Experience & training.</h2></div><div>{actor.resumePdf ? <div className="resume-actions"><a className="text-link" href={actor.resumePdf} target="_blank" rel="noopener noreferrer">View full résumé (PDF) <Arrow /></a><a className="text-link" href={actor.resumePdf} download>Download PDF ↓</a></div> : <p>Full résumé available on request.</p>}</div></div>
         <div className="resume-table">{resume.map(group => <div className="resume-row" key={group.category}><h3>{group.category}</h3><div>{group.entries.map(entry => <div key={entry.title}><h4>{entry.title}</h4><p>{entry.detail}</p></div>)}</div></div>)}</div>
+        <p className="disciplines">Height {actor.height} · Brown eyes · Brown hair · Chicago local hire</p>
       </section>
 
       <section className="current-work wrap" id="current-work" aria-labelledby="work-title">
@@ -54,6 +50,6 @@ export default function Home() {
 
       <section className="contact section" id="contact" aria-labelledby="contact-title"><div className="wrap contact-layout"><div><p className="eyebrow">04 / Contact</p><h2 id="contact-title">Let’s<br /><em>connect.</em></h2></div><div className="contact-copy"><p>For casting, creative collaborations,<br />and representation inquiries.</p><a className="contact-email" href={`mailto:${actor.email}`}>{actor.email} <Arrow /></a><a className="contact-email" href={`tel:${actor.phone.replace(/[^\d+]/g, '')}`}>{actor.phone}</a><p className="eyebrow">Chicago, Illinois</p></div></div></section>
     </main>
-    <footer className="wrap"><a href="#top">Chelsea Pejic</a><span>Actor · Chicago</span><a href="#top">Back to top ↑</a></footer>
+    <footer className="wrap"><a href="#main">Chelsea Pejic</a><span>Actor · Chicago</span><a href="#main">Back to top ↑</a></footer>
   </>;
 }
