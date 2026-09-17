@@ -19,7 +19,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">Actor / Chicago</p>
           <h1 id="hero-title">Chelsea Pejic</h1>
-          <p className="hero-line">Truth in the<br />unspoken moments.</p>
+          <p className="hero-line">Truth in the<br />{' '}unspoken moments.</p>
           <p className="disciplines">Film & television · Theatre · Commercial</p>
           <div className="hero-links"><a className="button" href="#about">About Chelsea <Arrow /></a><a className="text-link" href="#contact">Get in touch <Arrow /></a></div>
           <p className="hero-footnote">Based in Chicago, Illinois</p>
