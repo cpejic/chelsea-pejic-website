@@ -48,7 +48,7 @@ export default function Home() {
         <a className="text-link" href="#resume">View résumé <Arrow /></a>
       </section>
 
-      <section className="contact section" id="contact" aria-labelledby="contact-title"><div className="wrap contact-layout"><div><p className="eyebrow">04 / Contact</p><h2 id="contact-title">Let’s<br /><em>connect.</em></h2></div><div className="contact-copy"><p>For casting, creative collaborations,<br />and representation inquiries.</p><a className="contact-email" href={`mailto:${actor.email}`}>{actor.email} <Arrow /></a><a className="contact-email" href={`tel:${actor.phone.replace(/[^\d+]/g, '')}`}>{actor.phone}</a><p className="eyebrow">Chicago, Illinois</p></div></div></section>
+      <section className="contact section" id="contact" aria-labelledby="contact-title"><div className="wrap contact-layout"><div><p className="eyebrow">04 / Contact</p><h2 id="contact-title">Let’s<br /><em>connect.</em></h2></div><div className="contact-copy"><p>For casting, creative collaborations,<br />and representation inquiries.</p><a className="contact-email" href={`mailto:${actor.email}`}>{actor.email}</a><a className="contact-email" href={`tel:${actor.phone.replace(/[^\d+]/g, '')}`}>{actor.phone}</a><p className="eyebrow">Chicago, Illinois</p></div></div></section>
     </main>
     <footer className="wrap"><a href="#main">Chelsea Pejic</a><span>Actor · Chicago</span><a href="#main">Back to top ↑</a></footer>
   </>;
