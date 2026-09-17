@@ -13,10 +13,15 @@ export const metadata = {
   },
 };
 
-const baseNavigation = [['About', 'about'], ['Headshots', 'headshots'], ['Résumé', 'resume'], ['Current work', 'current-work'], ['Contact', 'contact']];
-
 export default function RootLayout({ children }) {
-  const navigation = actor.media.length ? [['About', 'about'], ['Headshots', 'headshots'], ['Media', 'media'], ['Résumé', 'resume'], ['Current work', 'current-work'], ['Contact', 'contact']] : baseNavigation;
+  const navigation = [
+    ['About', 'about'],
+    ...(actor.headshots.length ? [['Headshots', 'headshots']] : []),
+    ...(actor.media.length ? [['Media', 'media']] : []),
+    ['Résumé', 'resume'],
+    ['Current work', 'current-work'],
+    ['Contact', 'contact'],
+  ];
   return <html lang="en"><body id="top">
     <a className="skip-link" href="#main">Skip to content</a>
     <header className="site-header wrap"><a className="wordmark" href="#top" aria-label="Chelsea Pejic home">Chelsea Pejic<span>Actor</span></a><nav aria-label="Main navigation">{navigation.map(([label, id]) => <a key={id} href={`#${id}`}>{label}</a>)}</nav></header>
