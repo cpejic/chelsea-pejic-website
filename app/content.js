@@ -10,7 +10,16 @@ export const actor = {
   hair: 'Brown',
   resumePdf: null,
   heroImage: { src: '/headshots/chelsea-pejic.png', alt: 'Chelsea Pejic actor headshot', position: '50% 42%' },
-  headshots: [],
+  headshots: [
+    { src: '/headshots/02_Approachable_Commercial.jpg', alt: 'Chelsea Pejic commercial portrait', label: 'Commercial', position: '50% 35%' },
+    { src: '/headshots/03_Dramatic.jpg', alt: 'Chelsea Pejic dramatic portrait', label: 'Dramatic', position: '50% 35%' },
+    { src: '/headshots/04_Softer_Relatable.jpg', alt: 'Chelsea Pejic relatable portrait', label: 'Relatable', position: '50% 35%' },
+    { src: '/headshots/06_Character.jpg', alt: 'Chelsea Pejic character portrait', label: 'Character', position: '50% 35%' },
+    { src: '/headshots/07_Warm_Friendly.jpg', alt: 'Chelsea Pejic warm portrait', label: 'Warm', position: '50% 35%' },
+    { src: '/headshots/09_Bright_Commercial.jpg', alt: 'Chelsea Pejic bright commercial portrait', label: 'Bright commercial', position: '50% 35%' },
+    { src: '/headshots/10_Outdoor.jpg', alt: 'Chelsea Pejic outdoor portrait', label: 'Natural', position: '50% 35%' },
+    { src: '/headshots/11_Playful.jpg', alt: 'Chelsea Pejic playful portrait', label: 'Playful', position: '50% 35%' },
+  ],
   media: [],
 };
 
