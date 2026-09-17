@@ -19,11 +19,11 @@ export const resume = [
     { title: 'The Dinner', detail: 'Improviser · Theater Momentum' },
   ] },
   { category: 'Training', entries: [
-    { title: 'Shurtleff Scene Study', detail: 'Jack Bronis · Acting Studio Chicago · 2026' },
-    { title: 'Script Analysis', detail: 'Jennie Moreau · Acting Studio Chicago · 2026' },
-    { title: 'Improv Fundamentals', detail: 'Sean Sullivan · Second City Training Center · 2026' },
-    { title: 'Intro to On Camera', detail: 'Sarah Charipar · Acting Studio Chicago · 2026' },
-    { title: 'Advanced Scene Study', detail: 'Adrianne Curry · Acting Studio Chicago · Beginning December 2026' },
+    { title: 'Shurtleff Scene Study', detail: 'Jack Bronis · Acting Studio Chicago' },
+    { title: 'Script Analysis', detail: 'Jennie Moreau · Acting Studio Chicago' },
+    { title: 'Improv Fundamentals', detail: 'Sean Sullivan · Second City Training Center' },
+    { title: 'Intro to On Camera', detail: 'Sarah Charipar · Acting Studio Chicago' },
+    { title: 'Advanced Scene Study', detail: 'Adrianne Curry · Acting Studio Chicago' },
   ] },
 ];
 
