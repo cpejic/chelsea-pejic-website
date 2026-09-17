@@ -4,6 +4,10 @@ export const actor = {
   name: 'Chelsea Pejic',
   email: 'chelsea@chelseapejic.com',
   phone: '773-335-9603',
+  location: 'Chicago, Illinois',
+  height: `5'6"`,
+  eyes: 'Brown',
+  hair: 'Brown',
   resumePdf: null,
   heroImage: null, // { src: '/headshots/chelsea.jpg', alt: 'Chelsea Pejic', position: '50% 35%' }
   headshots: [], // { src, alt, label } — theatrical and commercial looks
@@ -11,5 +15,33 @@ export const actor = {
 };
 
 export const resume = [
-  { category: 'Theatre', entries: [{ title: 'The Dinner', detail: 'Theater Momentum · Dramatic improvisation · 2026' }] },
+  { category: 'Theatre', entries: [
+    { title: 'The Dinner', detail: 'Improviser · Theater Momentum' },
+  ] },
+  { category: 'Training', entries: [
+    { title: 'Shurtleff Scene Study', detail: 'Jack Bronis · Acting Studio Chicago · 2026' },
+    { title: 'Script Analysis', detail: 'Jennie Moreau · Acting Studio Chicago · 2026' },
+    { title: 'Improv Fundamentals', detail: 'Sean Sullivan · Second City Training Center · 2026' },
+    { title: 'Intro to On Camera', detail: 'Sarah Charipar · Acting Studio Chicago · 2026' },
+    { title: 'Advanced Scene Study', detail: 'Adrianne Curry · Acting Studio Chicago · Beginning December 2026' },
+  ] },
+];
+
+export const specialSkills = [
+  'Attorney',
+  'Financial Anti-Money Laundering Compliance',
+  'Public Speaking',
+  'Waitress',
+  'Restaurant Hostess',
+  'Au Pair',
+  'Hiking',
+  'Biking',
+  'Animal Care',
+  'Driver',
+  'Travel',
+  'Typing',
+  'Former Vatican Tour Guide',
+  'Casual Basketball',
+  'Casual Tennis',
+  'Casual Pickleball',
 ];
