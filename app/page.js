@@ -37,18 +37,18 @@ export default function Home() {
         <div className="headshot-grid">{actor.headshots.map(photo => <figure key={photo.src}><Portrait photo={photo} /><figcaption>{photo.label}</figcaption></figure>)}</div>
       </section> : null}
 
-      <section className="resume section wrap" id="resume" aria-labelledby="resume-title"><div className="section-heading"><div><p className="eyebrow">02 / Résumé</p><h2 id="resume-title">Experience & training.</h2></div><div>{actor.resumePdf ? <div className="resume-actions"><a className="text-link" href={actor.resumePdf} target="_blank" rel="noopener noreferrer">View full résumé (PDF) <Arrow /></a><a className="text-link" href={actor.resumePdf} download>Download PDF ↓</a></div> : <p>Full résumé available on request.</p>}</div></div>
+      <section className="resume section wrap" id="resume" aria-labelledby="resume-title"><div className="section-heading"><div><p className="eyebrow">03 / Résumé</p><h2 id="resume-title">Experience & training.</h2></div><div>{actor.resumePdf ? <div className="resume-actions"><a className="text-link" href={actor.resumePdf} target="_blank" rel="noopener noreferrer">View full résumé (PDF) <Arrow /></a><a className="text-link" href={actor.resumePdf} download>Download PDF ↓</a></div> : <p>Full résumé available on request.</p>}</div></div>
         <div className="resume-table">{resume.map(group => <div className="resume-row" key={group.category}><h3>{group.category}</h3><div>{group.entries.map(entry => <div key={entry.title}><h4>{entry.title}</h4><p>{entry.detail}</p></div>)}</div></div>)}</div>
-        <p className="disciplines">Height {actor.height} · Brown eyes · Brown hair · Chicago local hire</p>
+        <p className="disciplines">Height {actor.height} · Brown eyes · Brown hair · Based in Chicago</p>
       </section>
 
       <section className="current-work wrap" id="current-work" aria-labelledby="work-title">
-        <div className="work-date"><p className="eyebrow">03 / Current work</p><p>September 18<br /><span>— October 10, 2026</span></p></div>
+        <div className="work-date"><p className="eyebrow">04 / Current work</p><p>September 18<br /><span>— October 10, 2026</span></p></div>
         <div className="work-description"><p className="eyebrow">Theater Momentum · Chicago</p><h2 id="work-title">The Dinner</h2><p>A dinner party. Private secrets. Stories unfolding through dramatic improvisation.</p></div>
         <a className="text-link" href="#resume">View résumé <Arrow /></a>
       </section>
 
-      <section className="contact section" id="contact" aria-labelledby="contact-title"><div className="wrap contact-layout"><div><p className="eyebrow">04 / Contact</p><h2 id="contact-title">Let’s<br /><em>connect.</em></h2></div><div className="contact-copy"><p>For casting, creative collaborations,<br />and representation inquiries.</p><a className="contact-email" href={`mailto:${actor.email}`}>{actor.email}</a><a className="contact-email" href={`tel:${actor.phone.replace(/[^\d+]/g, '')}`}>{actor.phone}</a><p className="eyebrow">Chicago, Illinois</p></div></div></section>
+      <section className="contact section" id="contact" aria-labelledby="contact-title"><div className="wrap contact-layout"><div><p className="eyebrow">05 / Contact</p><h2 id="contact-title">Let’s<br /><em>connect.</em></h2></div><div className="contact-copy"><p>For casting, creative collaborations,<br />and representation inquiries.</p><a className="contact-email" href={`mailto:${actor.email}`}>{actor.email}</a><a className="contact-email" href={`tel:${actor.phone.replace(/[^\d+]/g, '')}`}>{actor.phone}</a><p className="eyebrow">Chicago, Illinois</p></div></div></section>
     </main>
     <footer className="wrap"><a href="#main">Chelsea Pejic</a><span>Actor · Chicago</span><a href="#main">Back to top ↑</a></footer>
   </>;
