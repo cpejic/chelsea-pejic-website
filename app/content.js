@@ -2,7 +2,8 @@
 // Leave unavailable material null; the site omits it until it is ready.
 export const actor = {
   name: 'Chelsea Pejic',
-  email: null,
+  email: 'chelsea@chelseapejic.com',
+  phone: '773-335-9603',
   resumePdf: null,
   heroImage: null, // { src: '/headshots/chelsea.jpg', alt: 'Chelsea Pejic', position: '50% 35%' }
   headshots: [], // { src, alt, label } — theatrical and commercial looks
