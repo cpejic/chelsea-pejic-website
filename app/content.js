@@ -17,6 +17,7 @@ export const actor = {
     { src: '/headshots/07_Warm_Friendly.jpg', alt: 'Chelsea Pejic warm portrait', label: 'Warm', position: '50% 35%' },
     { src: '/headshots/15_Fun_High_Resolution.png', alt: 'Chelsea Pejic laughing portrait', label: 'Fun', position: '50% 35%' },
     { src: '/headshots/15_Cozy_High_Resolution.png', alt: 'Chelsea Pejic relaxed cozy portrait', label: 'Cozy', position: '50% 35%' },
+    { src: '/headshots/14_Cozy.jpg', alt: 'Chelsea Pejic cozy portrait in white sweater', label: 'Cozy', position: '50% 35%' },
     { src: '/headshots/14_Playful.jpg', alt: 'Chelsea Pejic playful portrait', label: 'Playful', position: '50% 35%' },
   ],
   media: [],
