@@ -9,9 +9,9 @@ export const actor = {
   eyes: 'Brown',
   hair: 'Brown',
   resumePdf: null,
-  heroImage: null, // { src: '/headshots/chelsea.jpg', alt: 'Chelsea Pejic', position: '50% 35%' }
-  headshots: [], // { src, alt, label } — theatrical and commercial looks
-  media: [], // { title, description, url } — approved clips or reel URLs
+  heroImage: { src: '/headshots/chelsea-pejic.png', alt: 'Chelsea Pejic actor headshot', position: '50% 35%' },
+  headshots: [],
+  media: [],
 };
 
 export const resume = [
@@ -31,17 +31,15 @@ export const specialSkills = [
   'Attorney',
   'Financial Anti-Money Laundering Compliance',
   'Public Speaking',
-  'Waitress',
-  'Restaurant Hostess',
+  'Chipotle Restauranteur',
   'Au Pair',
   'Hiking',
-  'Biking',
+  'Bike Riding',
   'Animal Care',
-  'Driver',
-  'Travel',
+  'Driving',
+  'Valid Passport',
+  'Willing to Travel',
   'Typing',
   'Former Vatican Tour Guide',
-  'Casual Basketball',
-  'Casual Tennis',
-  'Casual Pickleball',
+  'Casual Sports (Bowling, Tennis, Skiing, Basketball, Volleyball, Swimming)',
 ];
