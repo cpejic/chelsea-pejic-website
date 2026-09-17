@@ -1,78 +1,55 @@
+import Image from 'next/image';
+import { actor, resume } from './content';
+
+const Arrow = () => <span aria-hidden="true">↗</span>;
+
+function Portrait({ photo, className = '', priority = false }) {
+  return <div className={`portrait ${className}`}>
+    {photo ? <Image src={photo.src} alt={photo.alt} fill priority={priority} sizes={priority ? '(max-width: 700px) 100vw, 58vw' : '(max-width: 700px) 100vw, 45vw'} style={{ objectFit: 'cover', objectPosition: photo.position || '50% 35%' }} /> : <>
+      <div className="portrait-frame" aria-hidden="true"><span>CP</span></div>
+      <div className="portrait-note"><span className="eyebrow">Chelsea Pejic</span><p>Actor · Chicago</p></div>
+    </>}
+  </div>;
+}
+
 export default function Home() {
-  return (
-    <main>
-      <section className="hero">
-        <div className="heroContent">
-          <p className="eyebrow">ACTOR • CHICAGO</p>
-
-          <h1>
-            CHELSEA
-            <br />
-            PEJIC
-          </h1>
-
-          <p className="intro">
-            Chicago-based actor bringing intelligence, emotional depth,
-            strength, and authenticity to stage and screen.
-          </p>
-
-          <div className="buttons">
-            <a href="#about">ABOUT</a>
-            <a href="#contact">CONTACT</a>
-          </div>
+  return <>
+    <main id="main">
+      <section className="hero" aria-labelledby="hero-title">
+        <div className="hero-copy">
+          <p className="eyebrow">Actor / Chicago</p>
+          <h1 id="hero-title">Chelsea Pejic</h1>
+          <p className="hero-line">Truth in the<br />unspoken moments.</p>
+          <p className="disciplines">Film & television · Theatre · Commercial</p>
+          <div className="hero-links"><a className="button" href="#about">About Chelsea <Arrow /></a><a className="text-link" href="#contact">Get in touch <Arrow /></a></div>
+          <p className="hero-footnote">Based in Chicago, Illinois</p>
         </div>
-
-        <div className="photoPlaceholder">
-          <span>HEADSHOT</span>
-          <small>Professional photo coming soon</small>
-        </div>
+        <Portrait photo={actor.heroImage} priority />
       </section>
 
-      <section className="about" id="about">
-        <p className="sectionLabel">ABOUT</p>
-
-        <h2>Story. Character. Truth.</h2>
-
-        <p>
-          Chelsea Pejic is a Chicago-based actor pursuing work in film,
-          television, theatre, and commercial projects. With a professional
-          background as an attorney and compliance executive, she brings
-          intelligence, presence, life experience, and a distinctive point
-          of view to her work as an actor.
-        </p>
+      <section className="about section wrap" id="about" aria-labelledby="about-title">
+        <div><p className="eyebrow">01 / About</p><h2 id="about-title">Quiet tension.<br /><em>Complex lives.</em></h2></div>
+        <div className="about-copy"><p className="lead">Chelsea Pejic is a Chicago-based actor working across theatre, film, television, and commercial performance.</p><p>She is especially drawn to dramatic material: complicated relationships, emotional restraint, and characters navigating what cannot easily be said.</p><p>Her work is grounded in curiosity, close observation, and an interest in the contradictions that make people human.</p></div>
       </section>
 
-      <section className="work">
-        <div>
-          <p className="sectionLabel">HEADSHOTS</p>
-          <h3>Gallery</h3>
-          <p>New professional headshots coming soon.</p>
-        </div>
+      {actor.headshots.length ? <section className="headshots section wrap" id="headshots" aria-labelledby="headshots-title">
+        <div className="section-heading"><div><p className="eyebrow">02 / Headshots</p><h2 id="headshots-title">Theatrical & commercial.</h2></div></div>
+        <div className="headshot-grid">{actor.headshots.map(photo => <figure key={photo.src}><Portrait photo={photo} /><figcaption>{photo.label}</figcaption></figure>)}</div>
+      </section> : null}
 
-        <div>
-          <p className="sectionLabel">RÉSUMÉ</p>
-          <h3>Experience & Training</h3>
-          <p>View acting credits, training, and special skills.</p>
-        </div>
-
-        <div>
-          <p className="sectionLabel">MEDIA</p>
-          <h3>Reel & Clips</h3>
-          <p>Performance footage and self-tape selections.</p>
-        </div>
+      <section className="resume section wrap" id="resume" aria-labelledby="resume-title"><div className="section-heading"><div><p className="eyebrow">03 / Résumé</p><h2 id="resume-title">Experience & training.</h2></div><div>{actor.resumePdf ? <div className="resume-actions"><a className="text-link" href={actor.resumePdf} target="_blank" rel="noopener noreferrer">View full résumé (PDF) <Arrow /></a><a className="text-link" href={actor.resumePdf} download>Download PDF ↓</a></div> : <p>Full résumé available on request.</p>}</div></div>
+        <div className="resume-table">{resume.map(group => <div className="resume-row" key={group.category}><h3>{group.category}</h3><div>{group.entries.map(entry => <div key={entry.title}><h4>{entry.title}</h4><p>{entry.detail}</p></div>)}</div></div>)}</div>
+        <p className="disciplines">Height {actor.height} · Brown eyes · Brown hair · Based in Chicago</p>
       </section>
 
-      <section className="contact" id="contact">
-        <p className="sectionLabel">CONTACT</p>
-        <h2>Let's work together.</h2>
-        <p>Chicago, Illinois</p>
-        <p>Representation and professional inquiries</p>
+      <section className="current-work wrap" id="current-work" aria-labelledby="work-title">
+        <div className="work-date"><p className="eyebrow">04 / Current work</p><p>September 18<br /><span>— October 10, 2026</span></p></div>
+        <div className="work-description"><p className="eyebrow">Theater Momentum · Chicago</p><h2 id="work-title">The Dinner</h2><p>A dinner party. Private secrets. Stories unfolding through dramatic improvisation.</p></div>
+        <a className="text-link" href="#resume">View résumé <Arrow /></a>
       </section>
 
-      <footer>
-        <span>CHELSEA PEJIC</span>
-        <span>ACTOR • CHICAGO</span>
-      </footer>
+      <section className="contact section" id="contact" aria-labelledby="contact-title"><div className="wrap contact-layout"><div><p className="eyebrow">05 / Contact</p><h2 id="contact-title">Let’s<br /><em>connect.</em></h2></div><div className="contact-copy"><p>For casting, creative collaborations,<br />and representation inquiries.</p><a className="contact-email" href={`mailto:${actor.email}`}>{actor.email}</a><a className="contact-email" href={`tel:${actor.phone.replace(/[^\d+]/g, '')}`}>{actor.phone}</a><p className="eyebrow">Chicago, Illinois</p></div></div></section>
     </main>
-  );
+    <footer className="wrap"><a href="#main">Chelsea Pejic</a><span>Actor · Chicago</span><a href="#main">Back to top ↑</a></footer>
+  </>;
 }
