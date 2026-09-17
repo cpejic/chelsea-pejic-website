@@ -1,5 +1,5 @@
 // Keep approved assets and contact details here. Paths are relative to /public.
-// Leave unavailable material null; the site renders an honest, intentional state.
+// Leave unavailable material null; the site omits it until it is ready.
 export const actor = {
   name: 'Chelsea Pejic',
   email: null,
@@ -11,8 +11,4 @@ export const actor = {
 
 export const resume = [
   { category: 'Theatre', entries: [{ title: 'The Dinner', detail: 'Theater Momentum · Dramatic improvisation · 2026' }] },
-  { category: 'Film & television', entries: [] },
-  { category: 'Commercial', entries: [] },
-  { category: 'Training', entries: [], note: 'Ongoing acting training since 2026. Class and instructor details to follow.' },
-  { category: 'Special skills', entries: [], note: 'Details to follow.' },
 ];
