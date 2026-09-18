@@ -3,7 +3,6 @@
 export const actor = {
   name: 'Chelsea Pejic',
   email: 'chelsea@chelseapejic.com',
-  phone: '773-335-9603',
   location: 'Chicago, Illinois',
   height: `5'6"`,
   eyes: 'Brown',
