@@ -1,4 +1,5 @@
 import './globals.css';
+import { Analytics } from '@vercel/analytics/next';
 import { actor } from './content';
 
 export const metadata = {
@@ -26,5 +27,6 @@ export default function RootLayout({ children }) {
     <a className="skip-link" href="#main">Skip to content</a>
     <header className="site-header wrap"><a className="wordmark" href="#top" aria-label="Chelsea Pejic home">Chelsea Pejic<span>Actor</span></a><nav aria-label="Main navigation">{navigation.map(([label, id]) => <a key={id} href={`#${id}`}>{label}</a>)}</nav></header>
     {children}
+    <Analytics />
   </body></html>;
 }
