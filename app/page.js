@@ -3,6 +3,20 @@ import { actor, resume } from './content';
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
+
+function SocialLinks() {
+  const links = [
+    { name: 'Instagram', href: 'https://www.instagram.com/chelseapejic/', icon: <><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="1.8" /><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="1.8" /><circle cx="17.5" cy="6.5" r="1.1" /></> },
+    { name: 'YouTube', href: 'https://www.youtube.com/@NationStyle', icon: <><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" strokeWidth="1.8" /><path d="M10 8.5 16 12 10 15.5Z" /></> },
+    { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61592850958330', icon: <path d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.4A24 24 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9Z" /> },
+  ];
+  return <nav aria-label="Social media" style={{ display: 'flex', flexWrap: 'wrap', gap: 14, marginTop: 26 }}>
+    {links.map(({ name, href, icon }) => <a key={name} className="button" href={href} target="_blank" rel="noopener noreferrer" aria-label={`${name} (opens in a new tab)`} title={`${name} (opens in a new tab)`} style={{ width: 48, height: 48, padding: 0, borderRadius: '50%', justifyContent: 'center', flexShrink: 0 }}>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">{icon}</svg>
+    </a>)}
+  </nav>;
+}
+
 function Portrait({ photo, className = '', priority = false }) {
   return <div className={`portrait ${className}`}>
     {photo ? <Image src={photo.src} alt={photo.alt} fill priority={priority} sizes={priority ? '(max-width: 700px) 100vw, 58vw' : '(max-width: 700px) 100vw, 45vw'} style={{ objectFit: 'cover', objectPosition: photo.position || '50% 35%' }} /> : <>
@@ -48,7 +62,7 @@ export default function Home() {
         <a className="text-link" href="#resume">View résumé <Arrow /></a>
       </section>
 
-      <section className="contact section" id="contact" aria-labelledby="contact-title"><div className="wrap contact-layout"><div><p className="eyebrow">05 / Contact</p><h2 id="contact-title">Let’s<br /><em>connect.</em></h2></div><div className="contact-copy"><p>For casting, creative collaborations,<br />and representation inquiries.</p><a className="contact-email" href={`mailto:${actor.email}`}>{actor.email}</a><p className="eyebrow">Chicago, Illinois</p></div></div></section>
+      <section className="contact section" id="contact" aria-labelledby="contact-title"><div className="wrap contact-layout"><div><p className="eyebrow">05 / Contact</p><h2 id="contact-title">Let’s<br /><em>connect.</em></h2></div><div className="contact-copy"><p>For casting, creative collaborations,<br />and representation inquiries.</p><a className="contact-email" href={`mailto:${actor.email}`}>{actor.email}</a><p className="eyebrow">Chicago, Illinois</p><SocialLinks /></div></div></section>
     </main>
     <footer className="wrap"><a href="#main">Chelsea Pejic</a><span>Actor · Chicago</span><a href="#main">Back to top ↑</a></footer>
   </>;
