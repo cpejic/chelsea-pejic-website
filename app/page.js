@@ -46,10 +46,10 @@ export default function Home() {
         <div className="about-copy"><p className="lead">Chelsea Pejic is a Chicago-based actor working across theatre, film, television, and commercial performance.</p><p>She is especially drawn to dramatic material: complicated relationships, emotional restraint, and characters navigating what cannot easily be said.</p><p>Her work is grounded in curiosity, close observation, and an interest in the contradictions that make people human.</p></div>
       </section>
 
-      {actor.headshots.length ? <section className="headshots section wrap" id="headshots" aria-labelledby="headshots-title">
+      <section className="headshots section wrap" id="headshots" aria-labelledby="headshots-title">
         <div className="section-heading"><div><p className="eyebrow">02 / Headshots</p><h2 id="headshots-title">Theatrical & commercial.</h2></div></div>
-        <div className="headshot-grid">{actor.headshots.map(photo => <figure key={photo.src}><Portrait photo={photo} /><figcaption>{photo.label}</figcaption></figure>)}</div>
-      </section> : null}
+        <div className="headshot-pending"><p>Coming soon</p></div>
+      </section>
 
       <section className="resume section wrap" id="resume" aria-labelledby="resume-title"><div className="section-heading"><div><p className="eyebrow">03 / Résumé</p><h2 id="resume-title">Experience & training.</h2></div><div>{actor.resumePdf ? <div className="resume-actions"><a className="text-link" href={actor.resumePdf} target="_blank" rel="noopener noreferrer">View full résumé (PDF) <Arrow /></a><a className="text-link" href={actor.resumePdf} download>Download PDF ↓</a></div> : <p>Full résumé available on request.</p>}</div></div>
         <div className="resume-table">{resume.map(group => <div className="resume-row" key={group.category}><h3>{group.category}</h3><div>{group.entries.map(entry => <div key={entry.title}><h4>{entry.title}</h4><p>{entry.detail}</p></div>)}</div></div>)}</div>
