@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     ...(actor.headshots.length ? [['Headshots', 'headshots']] : []),
     ...(actor.media.length ? [['Media', 'media']] : []),
     ['Résumé', 'resume'],
-    ['Current work', 'current-work'],
+    ['Recent Work', 'current-work'],
     ['Contact', 'contact'],
   ];
   return <html lang="en"><body id="top">
