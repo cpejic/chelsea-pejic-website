@@ -23,12 +23,13 @@ export const actor = {
 };
 
 export const resume = [
-  { category: 'Theatre', entries: [
+  { category: 'Theater', entries: [
     { title: 'The Dinner', detail: 'Improviser · Theater Momentum' },
   ] },
   { category: 'Training', entries: [
     { title: 'Shurtleff Scene Study', detail: 'Jack Bronis · Acting Studio Chicago' },
     { title: 'Script Analysis', detail: 'Jennie Moreau · Acting Studio Chicago' },
+    { title: 'Dramatic Improv', detail: 'Tony Rielage · Theatre Momentum' },
     { title: 'Improv Fundamentals', detail: 'Sean Sullivan · Second City Training Center' },
     { title: 'Intro to On Camera', detail: 'Sarah Charipar · Acting Studio Chicago' },
     { title: 'Advanced Scene Study', detail: 'Adrianne Curry · Acting Studio Chicago' },
