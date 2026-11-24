@@ -51,7 +51,7 @@ export default function Home() {
         <div className="headshot-pending"><p>Coming soon</p></div>
       </section>
 
-      <section className="resume section wrap" id="resume" aria-labelledby="resume-title"><div className="section-heading"><div><p className="eyebrow">03 / Résumé</p><h2 id="resume-title">Experience & Training</h2></div><div>{actor.resumePdf ? <div className="resume-actions"><a className="text-link" href={actor.resumePdf} target="_blank" rel="noopener noreferrer">View full résumé (PDF) <Arrow /></a><a className="text-link" href={actor.resumePdf} download>Download PDF ↓</a></div> : <p>Full résumé available on request.</p>}</div></div>
+      <section className="resume section wrap" id="resume" aria-labelledby="resume-title"><div className="section-heading"><div><p className="eyebrow">03 / Résumé</p><h2 id="resume-title">Experience & Training</h2></div><div>{actor.resumePdf ? <div className="resume-actions"><a className="text-link" href={actor.resumePdf} target="_blank" rel="noopener noreferrer">View full résumé (PDF) <Arrow /></a><a className="text-link" href={actor.resumePdf} download>Download PDF ↓</a></div> : null}</div></div>
         <div className="resume-table">{resume.map(group => <div className="resume-row" key={group.category}><h3>{group.category}</h3><div>{group.entries.map(entry => <div key={entry.title}><h4>{entry.title}</h4><p>{entry.detail}</p></div>)}</div></div>)}</div>
         <div className="resume-table"><div className="resume-row"><h3>Special Skills</h3><div><p>{specialSkills.join(" · ")}</p></div></div></div>
         <p className="disciplines">Height {actor.height} · Weight 170 lbs · Brown eyes · Brown hair · Based in Chicago</p>
