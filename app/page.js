@@ -47,11 +47,11 @@ export default function Home() {
       </section>
 
       <section className="headshots section wrap" id="headshots" aria-labelledby="headshots-title">
-        <div className="section-heading"><div><p className="eyebrow">02 / Headshots</p><h2 id="headshots-title">Theatrical, Film & Commercial.</h2></div></div>
+        <div className="section-heading"><div><p className="eyebrow">02 / Headshots</p><h2 id="headshots-title">Theatrical, Film & Commercial</h2></div></div>
         <div className="headshot-pending"><p>Coming soon</p></div>
       </section>
 
-      <section className="resume section wrap" id="resume" aria-labelledby="resume-title"><div className="section-heading"><div><p className="eyebrow">03 / Résumé</p><h2 id="resume-title">Experience & training.</h2></div><div>{actor.resumePdf ? <div className="resume-actions"><a className="text-link" href={actor.resumePdf} target="_blank" rel="noopener noreferrer">View full résumé (PDF) <Arrow /></a><a className="text-link" href={actor.resumePdf} download>Download PDF ↓</a></div> : <p>Full résumé available on request.</p>}</div></div>
+      <section className="resume section wrap" id="resume" aria-labelledby="resume-title"><div className="section-heading"><div><p className="eyebrow">03 / Résumé</p><h2 id="resume-title">Experience & Training</h2></div><div>{actor.resumePdf ? <div className="resume-actions"><a className="text-link" href={actor.resumePdf} target="_blank" rel="noopener noreferrer">View full résumé (PDF) <Arrow /></a><a className="text-link" href={actor.resumePdf} download>Download PDF ↓</a></div> : <p>Full résumé available on request.</p>}</div></div>
         <div className="resume-table">{resume.map(group => <div className="resume-row" key={group.category}><h3>{group.category}</h3><div>{group.entries.map(entry => <div key={entry.title}><h4>{entry.title}</h4><p>{entry.detail}</p></div>)}</div></div>)}</div>
         <p className="disciplines">Height {actor.height} · Brown eyes · Brown hair · Based in Chicago</p>
       </section>
