@@ -47,7 +47,7 @@ export default function Home() {
       </section>
 
       <section className="headshots section wrap" id="headshots" aria-labelledby="headshots-title">
-        <div className="section-heading"><div><p className="eyebrow">02 / Headshots</p><h2 id="headshots-title">Theatrical & commercial.</h2></div></div>
+        <div className="section-heading"><div><p className="eyebrow">02 / Headshots</p><h2 id="headshots-title">Theatrical, Film & Commercial.</h2></div></div>
         <div className="headshot-pending"><p>Coming soon</p></div>
       </section>
 
