@@ -57,7 +57,7 @@ export default function Home() {
       </section>
 
       <section className="current-work wrap" id="current-work" aria-labelledby="work-title">
-        <div className="work-date"><p className="eyebrow">04 / Current work</p><p>September 18<br /><span>— October 10, 2026</span></p></div>
+        <div className="work-date"><p className="eyebrow">04 / Recent Work</p><p>September 18<br /><span>— October 10, 2026</span></p></div>
         <div className="work-description"><p className="eyebrow">Theater Momentum · Chicago</p><h2 id="work-title">The Dinner</h2><p>A dinner party. Private secrets. Stories unfolding through dramatic improvisation.</p></div>
         <a className="text-link" href="#resume">View résumé <Arrow /></a>
       </section>
